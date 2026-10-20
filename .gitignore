@@ -1,0 +1,11 @@
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.build/
+.swiftpm/
+.vscode/
+.DS_Store
+Config/Local.xcconfig
+build/
+*.xcresult
+*.log
