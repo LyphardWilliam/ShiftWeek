@@ -1,0 +1,32 @@
+{
+  "Today/TodayView.swift": {
+    "sha256": "6a51b4ab321f4aea5caa837394761dc61fcbb57ac12729155b80f0ce736a3915",
+    "targetPath": "ShiftWeek/Features/Today/TodayView.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  },
+  "Today/TodayViewModel.swift": {
+    "sha256": "9807fa8b28e2f498dbf45d4a5fe0ae7898bcd259c4dfd119012679ffe861b7a9",
+    "targetPath": "ShiftWeek/Features/Today/TodayViewModel.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  },
+  "Week/ShiftFormView.swift": {
+    "sha256": "5a79addfb4709631341409f99ee853e0c345ed6618fad4df0b8ebdd3804c1fc1",
+    "targetPath": "ShiftWeek/Features/Week/ShiftFormView.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  },
+  "Week/ShiftFormViewModel.swift": {
+    "sha256": "73be94131ef280bfa25d8d94554ef1d4678420ab8575c6f3aa503f7f9e5e7eff",
+    "targetPath": "ShiftWeek/Features/Week/ShiftFormViewModel.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  },
+  "Week/WeekView.swift": {
+    "sha256": "a52a32d757da2646f6ddcc06c11e28835cf3985a99d4aa478f29bd367026e9cb",
+    "targetPath": "ShiftWeek/Features/Week/WeekView.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  },
+  "Week/WeekViewModel.swift": {
+    "sha256": "8ad2211aae3e6a445360fc362b5164450055c0afcb70c9912f4010ebbc5eef07",
+    "targetPath": "ShiftWeek/Features/Week/WeekViewModel.swift",
+    "status": "prepared; not in the App target; requires production AppDependencies"
+  }
+}
