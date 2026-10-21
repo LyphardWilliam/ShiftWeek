@@ -6,6 +6,7 @@ struct PayslipDetailView: View {
     let viewModel: PayViewModel
     let payslip: Payslip
     @State private var check: PayslipCheck?
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         List {
@@ -66,28 +67,41 @@ struct PayslipDetailView: View {
                  difference: Format.signedMoney(comparison.payDifference)),
         ]
         return Section("Comparison") {
-            Grid(alignment: .trailing, horizontalSpacing: 12, verticalSpacing: 8) {
-                GridRow {
-                    Text("")
-                    header("Your records")
-                    header("Payslip")
-                    header("Difference")
-                }
+            if dynamicTypeSize.isAccessibilitySize {
+                // Not enough room for columns, so each value gets its own line.
                 ForEach(lines) { line in
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(line.name).font(.headline)
+                        Text("Your records: \(line.recorded)")
+                        Text("Payslip: \(line.payslip)")
+                        Text("Difference: \(line.difference)")
+                    }
+                    .accessibilityElement(children: .combine)
+                }
+            } else {
+                Grid(alignment: .trailing, horizontalSpacing: 12, verticalSpacing: 8) {
                     GridRow {
-                        Text(line.name)
-                            .gridColumnAlignment(.leading)
-                        Text(line.recorded)
-                        Text(line.payslip)
-                        Text(line.difference)
-                            .fontWeight(.semibold)
+                        Text("")
+                        header("Your records")
+                        header("Payslip")
+                        header("Difference")
+                    }
+                    ForEach(lines) { line in
+                        GridRow {
+                            Text(line.name)
+                                .gridColumnAlignment(.leading)
+                            Text(line.recorded)
+                            Text(line.payslip)
+                            Text(line.difference)
+                                .fontWeight(.semibold)
+                        }
                     }
                 }
+                .font(.subheadline)
+                .monospacedDigit()
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(lines.map(\.spoken).joined(separator: ". "))
             }
-            .font(.subheadline)
-            .monospacedDigit()
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel(lines.map(\.spoken).joined(separator: ". "))
         }
     }
 
