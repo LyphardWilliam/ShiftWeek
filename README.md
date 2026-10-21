@@ -2,10 +2,6 @@
 
 ShiftWeek helps students with casual jobs plan their shifts, clock in and out, and check each payslip against their own records.
 
-## Integration status
-
-The App entry is currently a skeleton. B's shared models, repositories and Widget are in the production source folders. The six Today/Week screen files are available in [B's integration handoff](handoff/B/README.md), awaiting A's production dependency assembly and App shell. The handoff includes validation scope and remaining integration checks.
-
 ## Setup
 
 1. Open `ShiftWeek.xcodeproj` (the app needs iOS 26.0 or later). The current B delivery was built with Xcode 26.3 / Swift 6.2.4 and the iOS 26.2 Simulator SDK.
