@@ -1,17 +1,20 @@
 # B contribution facts
 
-GitHub author: `chmmmg`. Full names and student IDs belong in the checked course submission, not this public handoff.
+GitHub author: `chmmmg`. Full names and student IDs belong in the checked course PDF, not this public record.
 
 | Commit | Actual change |
 | --- | --- |
 | `e4f780a` | Shared SwiftData models for jobs, shifts and payslips |
 | `ac60b29` | Shared model container with an explicit App Group fallback |
 | `a196531` | Shared calendar, colours and formatting |
-| `3259062` | Three SwiftData repository implementations for the current ShiftCore protocols |
+| `3259062` | Three SwiftData repository implementations for ShiftCore protocols |
 | `a3cd718` | Read-only Widget provider and small/medium layouts |
+| `f15058a` | Six complete Today/Week/form files and integration evidence |
 
-The screen handoff contains six complete files: Today View/ViewModel, shift form View/ViewModel, and Week View/ViewModel. They were verified with an external test assembly and await A's production integration. This handoff documentation has its own commit in the actual branch history.
+A moved the six B screen files into production in `e722197`, then connected them through the real App assembly. The hashes in [source-manifest.json](source-manifest.json) preserve the link to B's original source. A also implemented Settings and Pay; C implemented ShiftCore rules, protocols, use cases and package tests.
 
-`04891c8` synchronizes main's C dependencies into the B integration branch. Count it as dependency synchronization, not another feature. Do not infer contribution percentages or hours from the number of commits or lines of code.
+`04891c8` synchronizes C dependencies from main. `0b3d527` merges B's earlier delivery. Both have multiple parents and are merge commits, not extra features.
 
-The planned team workflow uses feature branches, review and merge commits. This file records code changes; it does not prove peer review. Record any review, PR and final merge separately from their actual history. No teammate's contribution, individual reflection or final submission is claimed here.
+At main `5d44328`, the reachable history contains 6 B non-merge commits and 2 B merge commits. B's 12 current production Swift files contain 1,316 physical lines, including blank lines/comments and final unterminated lines. This is current file responsibility, not Git-added lines, independent authorship of reference material, hours or a contribution percentage. Later finish-branch documentation commits are separate until merged.
+
+The current finish work uses `feat/b-demo-delivery` for review by A. Record the actual PR and merge when they exist. Commit history does not by itself prove peer review, individual authorship of reflections or final submission.
